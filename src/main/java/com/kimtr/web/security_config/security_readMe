@@ -1,0 +1,32 @@
+https://velog.io/@wooyong99/Spring-Security
+
+
+Spring Security란
+Spring Security는 Spring 기반 애플리케이션의 보안(인증과 권한 등)을 담당하는 프레임 워크입니다. 
+Spring Security는 인증과 권한에 대해 Filter 흐름에 따라 처리하고 있으며 보안과 관련해서 많은 옵션을 제공해주고 있기 때문에 개발자가 일일이 보안 로직을 작성하지 않아도 된다는 장점이 있습니다.
+
+
+▷ 인증(Authorizatoin)과 인가(Authentication)
+
+인증(Authentication) : 사용자가 누구인지 확인하는 절차(ex. login)   데이터베이스에서 아이디와 패스워드로 조회한다.
+인가(Authentication) : 인증된 사용자가 요청한 자원에 접근 가능한지 권한을 확인하는 절차   권한의 룰을 정하고 부여한다.  사용자의 권하는 데이터베이스에 저장된 정보로 구분
+
+
+
+접근 주체(Principal) : 보호된 대상에 접근하는 유저
+인증(Authentication) : 증명, 유저가 누구인지 확인하는 것, 통상 회원가입하고 로그인하는 것을 말한다.
+인가(Authorization) : 허락, 유저에 대한 권한을 확인, 허락하는 것
+
+
+▷ 사용 기술
+
+Framework: Spring Boot 3.1.0, Spring Security 6.1.0
+개발 언어 : java 17
+view : thymeleaf
+퍼시스턴스 프레임워크 : mybatis
+Database: oracle
+
+
+1. gradle > 디펜던시 추가 > gradle 빌드
+2. 스프링 부트를 다시 실행시키면 로그인 창이 뜬다. 이 창은 시프링 시큐리티가 제공하는 화면이다..  아이디는 user 패스워드는 콘솔창에 있다.
+3. 

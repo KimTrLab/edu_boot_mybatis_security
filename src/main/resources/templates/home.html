@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+	crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<body>
+
+	<th:block th:replace="./include/top.html"></th:block>
+
+
+	<div id="mainsection">
+		
+		<div id="mainsection_left">
+
+			<div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+				<button type="button" class="btn btn-primary">Button</button>
+				<button type="button" class="btn btn-primary">Button</button>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+						aria-expanded="false">Dropdown
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+						<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+					</ul>
+				</div>
+				<div class="btn-group dropstart" role="group">
+					<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+						aria-expanded="false">Dropdown
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+						<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+					</ul>
+				</div>
+				<div class="btn-group dropend" role="group">
+					<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+						aria-expanded="false">Dropdown
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+						<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+					</ul>
+				</div>
+				<div class="btn-group dropup" role="group">
+					<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+						aria-expanded="false">Dropdown
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+						<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="mainsection_01">
+			<div>
+				<div id="carouselExampleCaptions" class="carousel slide">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+							class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+							aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+							aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="./img/indexmain.jpg" class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>올바른 개발자</h5>
+								<p>첫 시작은 올바르게</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="./img/java.PNG" class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Second slide label</h5>
+								<p>Some representative placeholder content for the second
+									slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="./img/js.PNG" class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Third slide label</h5>
+								<p>Some representative placeholder content for the third
+									slide.</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="asidelogin">
+		<th:block th:replace="./include/aside_login.html"></th:block>
+	</div>
+
+	<div id="infosection">
+		<div class="infosetion_card">
+			<h3>Java</h3>
+			<hr>
+			<p>객체지향언어 자바는 프로그래밍 실력향상에 좋은 언어이다</p>
+		</div>
+		<div class="infosetion_card">
+			<h3>Spring</h3>
+			<hr>
+			<p>웹개발에서 Spring은 필수적인 요소이다. 프레임워크를 구성을 이해하자</p>
+		</div>
+		<div class="infosetion_card">
+			<h3>JavaScript</h3>
+			<hr>
+			<p>자바스크립트는 html 태그를 선택하여 동적인 효과를 가져다 주며 반응형 웹에서 많이 사용한다.</p>
+		</div>
+		<div class="infosetion_card">
+			<h3>JavaScript</h3>
+			<hr>
+			<p>자바스크립트는 html 태그를 선택하여 동적인 효과를 가져다 주며 반응형 웹에서 많이 사용한다.</p>
+		</div>
+		<div class="infosetion_card">
+			<h3>JavaScript</h3>
+			<hr>
+			<p>자바스크립트는 html 태그를 선택하여 동적인 효과를 가져다 주며 반응형 웹에서 많이 사용한다.</p>
+		</div>
+
+	</div>
+	<div id="footer">
+		<hr>
+		김티처 tel. 010-9407-8767
+	</div>
+	<th:block th:replace="./include/tailModal.html"></th:block>
+</body>
+
+</html>
+<script>
+	//	<c:if test="${msg != 'no' }">
+	//	alert("${msg}");
+	//	</c:if>
+</script>
+<script type="text/javascript">
+	var getData;
+	$.ajax({
+		type: 'GET',
+		url: "top10/js",
+		dataType: "",
+		success: function (data) {
+		//	console.log('성공 - ', data);
+			getData = data.split("],");
+			console.log(getData.length);
+			for (let i = 0; i < getData.length; i++) {
+				//console.log(data[i][0] + "/" + data[i][1]);
+				splitData = getData[i].split(",")
+			
+				var innerHtml = "";
+				innerHtml += '<tr>';
+				innerHtml += '    <td>' + splitData[1] + '</td>';
+				innerHtml += '</tr>';
+				$('#tbl > tbody').append(innerHtml);
+			}
+		},
+		error: function (xhr) {
+			console.log('실패 - ', xhr);
+		}
+	});
+/*
+	$.ajax({
+		type: "GET",
+		url: "http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99",
+		data: {},
+		success: function (response) {
+			//console.log(typeof (response));
+			let mise_list = response["RealtimeCityAir"]["row"];
+			//console.log(response["RealtimeCityAir"]["row"]);
+			for (let i = 0; i < mise_list.length; i++) {
+				let mise = mise_list[i];
+				let gu_name = mise["MSRSTE_NM"];
+				let gu_mise = mise["IDEX_MVL"];
+				console.log(gu_name, gu_mise);
+				//	var innerHtml = "";
+				//	innerHtml += '<tr>';
+				//	innerHtml += '    <td>' + gu_name + '</td>';
+				//	innerHtml += '    <td>' + gu_mise + '</td>';
+				//	innerHtml += '</tr>';
+				//	$('#tbl > tbody').append(innerHtml);
+			}
+		}
+	});
+
+*/
+	function joinus() {
+
+		location.href = "<%=request.getContextPath()%>/rest";
+	}
+</script>

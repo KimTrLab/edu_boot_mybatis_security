@@ -1,0 +1,46 @@
+<style>
+	#tbl {
+		maring: 0px auto;
+	}
+	
+	
+</style>
+
+<div id="loginbox">
+			<div id="loginup">KimTeacher Laps에 참여하세요</div>
+			<div id="login" data-bs-toggle="modal" data-bs-target="#loginModal">
+				KimTeacher 로그인</div>
+			<div id="logindown">
+				<br>
+				<!-- <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">회원가입</button>-->
+				<button type="button" onclick="gojoin()">회원가입</button>
+				<button type="button">아이디/비빌번호찾기</button>
+
+			</div>
+			
+			<br>
+			<div id="news">
+				<img src="./img/we.PNG">
+			</div>
+			<div id="talks">
+				<table id="tbl" width="80%" border=0>
+					<tbody>
+						<tr>
+							<td colspan=2 align=center>
+								<div id="section_login">NATE 실시간검색어</div></td>
+						</tr>
+					</tbody>
+				</table>
+
+
+			</div>
+		</div>
+		<div></div>
+		<script>
+			function gojoin(){
+				location.href = '/join';
+			}
+			
+			
+			
+		</script>

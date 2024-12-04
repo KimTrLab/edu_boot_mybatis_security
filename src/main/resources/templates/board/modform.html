@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+
+<body>
+  <th:block th:replace="./include/top.html"></th:block>
+  <div id="mainsection">
+   
+    <div id="mainsection_left">
+
+      <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+        <button type="button" class="btn btn-primary">Button</button>
+        <button type="button" class="btn btn-primary">Button</button>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+        <div class="btn-group dropstart" role="group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+        <div class="btn-group dropend" role="group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+        <div class="btn-group dropup" role="group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="mainsection_01">
+      <br>
+      <div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">게시글 수정</h5>
+          </div>
+        </div>
+      </div>
+
+      <form class="row g-3" action="mod" method="post">
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">놀이터 선택</label>
+          <select id="inputState" class="form-select" name="type">
+            <option 
+            <c:if test="${boardvo.type eq 'Database'}">
+            selected
+            </c:if>>Database</option>
+            
+            <option 
+            <c:if test="${boardvo.type eq 'Java'}">selected
+            </c:if>
+            >Java</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="inputCity" class="form-label">작성자</label>
+          <input type="text" class="form-control" id="inputCity" name="username" value="${boardvo.username }">
+        </div>
+        <div class="col-md-3">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" name="pass" value="${boardvo.pass }">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">제목</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="제목을 입력하세요" name="title" value="${boardvo.title }" readonly>
+        </div>
+
+
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+            style="height: 200px" name="content">${boardvo.content }"</textarea>
+          <label for="floatingTextarea2">Comments</label>
+        </div>
+        <div class="mb-3">
+          <input class="form-control" type="file" id="formFile">
+          <input class="form-control" type="file" id="formFile">
+        </div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" name="viewmember" value=1
+            	<c:if test="${boardvo.viewmember eq '비공개'}">
+            	checked
+            	</c:if>            
+            >
+            <label class="form-check-label" for="gridCheck">
+              회원만 보기
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+           <input type="hidden" 
+           name="num" value="${boardvo.num}">
+          <button type="submit" class="btn btn-primary">수정하기</button>
+          <!--  submit 타입은 form action으로 지정된 곳으로 이동 -->
+        </div>
+      </form>
+    </div>
+
+  </div>
+  </div>
+  <div id="asidelogin">
+    <div id="loginbox">
+      <div id="loginup">
+        KimTeacher Lap에 참여하세요
+      </div>
+      <div id="login" data-bs-toggle="modal" data-bs-target="#loginModal">
+        KimTeacher 로그인
+      </div>
+      <div id="logindown">
+        <br>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          회원가입
+        </button>
+        <button type="button">아이디/비빌번호찾기</button>
+
+      </div>
+   
+      <br>
+      <div id="news">
+        <img src="./img/we.PNG">
+      </div>
+      <div id="talks">
+      </div>
+    </div>
+    <div>
+
+
+    </div>
+  </div>
+  <div id="footer">
+    <hr>
+    김티처 tel. 010-9407-8767
+  </div>
+  <th:block th:replace="./include/tailModal.html"></th:block>
+</body>
+
+</html>
